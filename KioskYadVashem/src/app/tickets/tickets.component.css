@@ -1,0 +1,16 @@
+section{
+    display: table;
+}
+.cntr{
+   align-self: center; text-align: center;
+}
+.btnrow{
+    display: table-row;
+    max-width: 80px;
+    direction: rtl;
+   padding: 15px;
+}
+.lab{
+    padding: 10px;
+    font-size: 20px;
+}

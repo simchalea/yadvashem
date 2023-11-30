@@ -1,0 +1,14 @@
+<p>order works!</p>
+<div>
+    <p>you order: {{numOfPerson}} for {{selectedHour}}</p>
+    <p>thank you!!</p>
+  </div>
+
+  <div mat-dialog-content>
+   <mat-label>you order: {{numOfPerson}} for {{selectedHour}}</mat-label>
+  </div>
+  <mat-label>see you</mat-label>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+
+  </div>

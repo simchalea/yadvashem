@@ -1,0 +1,26 @@
+<div class="cntr">
+  <h2>כניסה למוזיאון</h2>
+  <h4>נא למלא את הפרטים ולחץ המשך<br>הכניסה למוזיאון אינה כוכה בתשלום</h4>
+
+<div><button mat-raised-button (click)="minus()">-</button><input matInput type ="number" placeholder="0"[(ngModel)]="numOfPerson"><button mat-raised-button (click)="plus()">+</button><label class="lab">מספר מבקרים</label></div>
+<div class="lab"><label>תאריך {{myDate|date:'shortDate'}} | </label><label>כרטיסים שנותרו {{ticketsLeft}}</label></div>
+<mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
+  <mat-button-toggle   (click)="selectPartDay(2)">ערב</mat-button-toggle>
+    <mat-button-toggle  (click)="selectPartDay(1)">צהריים</mat-button-toggle>
+    <mat-button-toggle  (click)="selectPartDay(0)">בוקר</mat-button-toggle>
+    
+  </mat-button-toggle-group>
+ 
+<div  *ngFor="let h of hours |slice:getOpen():getClose() let i=index" >
+ <mat-button-toggle-group>
+  <br *ngIf="i%5==0">
+  <mat-button-toggle  class="btnrow" (click)="selectHour(h.startTime)">{{h.startTime}} <br>כרטיסים
+     {{h.availablePlaces}} </mat-button-toggle> </mat-button-toggle-group></div>
+     <div type="submit" class="btn btn-primary" (click)="showSelected()"><button mat-raised-button>המשך</button><button mat-raised-button>חזור</button>
+    </div>
+
+   
+  </div>
+
+  
+ 
